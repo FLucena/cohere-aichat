@@ -15,7 +15,7 @@ A Streamlit web application that generates text using Cohere's AI model. This ap
 
 ## Live Demo
 
-Visit [AI Text Generator](https://cohere-flautomations.vercel.app) to try the application.
+Visit [AI Text Generator](https://cohere-aichat.streamlit.app/) to try the application.
 
 ## Getting Started
 
@@ -97,10 +97,8 @@ streamlit run app.py
 ### Deploy Your Own
 
 1. Fork this repository
-2. Create a new project on Vercel
-3. Connect your forked repository
-4. Add environment variables in Vercel dashboard
-5. Deploy!
+2. Connect your forked repository
+3. Deploy!
 
 ## Development
 
@@ -120,4 +118,3 @@ pytest
 - [Cohere](https://cohere.ai) for providing the AI model
 - [Streamlit](https://streamlit.io) for the web framework
 - [FastAPI](https://fastapi.tiangolo.com) for the backend framework
-- [Vercel](https://vercel.com) for hosting

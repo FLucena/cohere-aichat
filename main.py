@@ -28,8 +28,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:8501",  
-        "https://cohere-flautomations.vercel.app",
-        "https://cohere-ai-chat-flucena-flucenas-projects.vercel.app"
+        "https://cohere-aichat.streamlit.app/"
     ],
     allow_credentials=True,
     allow_methods=["*"],

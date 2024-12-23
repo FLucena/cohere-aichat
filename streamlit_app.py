@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 # Backend API URL - use environment variable or default to production URL
-API_URL = os.getenv('API_URL', 'https://cohere-flautomations.vercel.app/api')
+API_URL = os.getenv('API_URL', 'https://cohere-aichat.streamlit.app/')
 
 def show_api_instructions():
     st.markdown("""

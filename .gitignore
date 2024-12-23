@@ -26,9 +26,6 @@ wheels/
 .installed.cfg
 *.egg
 
-# Vercel
-.vercel
-
 # IDE
 .vscode/
 .idea/
