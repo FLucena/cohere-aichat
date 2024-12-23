@@ -97,8 +97,9 @@ streamlit run app.py
 ### Deploy Your Own
 
 1. Fork this repository
-2. Connect your forked repository
-3. Deploy!
+2. Create a new app on [Streamlit Cloud](https://share.streamlit.io)
+3. Connect your forked repository
+4. Deploy!
 
 ## Development
 
