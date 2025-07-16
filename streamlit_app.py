@@ -57,13 +57,12 @@ def main():
                 )
                 if generated_text:
                     st.write(generated_text)
-        except cohere.CohereError as ce:
-            if "401" in str(ce):
-                st.error("Invalid API key. Please check your key and try again.")
-            elif "429" in str(ce):
-                st.error("Rate limit exceeded. Please wait before trying again.")
-            else:
-                st.error(f"Error from Cohere API: {str(ce)}")
+        except cohere.UnauthorizedError:
+            st.error("Invalid API key. Please check your key and try again.")
+        except cohere.TooManyRequestsError:
+            st.error("Rate limit exceeded. Please wait before trying again.")
+        except (cohere.BadRequestError, cohere.InternalServerError, cohere.ServiceUnavailableError) as ce:
+            st.error(f"Error from Cohere API: {str(ce)}")
         except Exception as e:
             st.error(f"An unexpected error occurred: {str(e)}")
 

@@ -22,20 +22,20 @@ def generate_text_with_cohere(
         # Log before making Cohere request
         logger.info("Making request to Cohere API")
         
-        response = client.generate(
+        response = client.chat(
             model='command-xlarge-nightly',
-            prompt=prompt,
+            message=prompt,
             max_tokens=max_tokens,
-            temperature=temperature,
-            truncate='END'
+            temperature=temperature
         )
         
         # Log successful response
         logger.info("Successfully received response from Cohere")
         
-        return response.generations[0].text
+        return response.text
         
-    except cohere.CohereError as ce:
+    except (cohere.UnauthorizedError, cohere.TooManyRequestsError, cohere.BadRequestError, 
+            cohere.InternalServerError, cohere.ServiceUnavailableError) as ce:
         # Specific handling for Cohere API errors
         logger.error(f"Cohere API error: {str(ce)}")
         raise ce 
